@@ -1,47 +1,64 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
+  <div class="container-fluid">
 
+    <app-header></app-header>
+
+    <div class="row">
+      <app-search></app-search>
+
+      <div class="col-4 panel" id="preview">
+        <h5>Preview Panel</h5>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+
+    import Header from './components/Header.vue'
+    import Search from './components/Search.vue'
+    export default {
+
+        components: {
+            appHeader: Header,
+            appSearch: Search,
+        },
+        data () {
+            return {
+
+            }
+        }
     }
-  }
-}
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  body {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+    margin-top: 5px;
+    height: 100%;
+  }
 
-h1, h2 {
-  font-weight: normal;
-}
+  #navigation {
+    margin-bottom: 20px;
+  }
+  .panel {
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+  }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+  #preview {
+    background-color: inherit;
+  }
 
-a {
-  color: #42b983;
-}
+  h1, h2 {
+    font-weight: normal;
+  }
+
+
+
+  a {
+    color: #42b983;
+  }
 </style>
