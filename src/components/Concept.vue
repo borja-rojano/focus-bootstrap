@@ -2,7 +2,14 @@
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">Concept {{index + 1}}</h5>
-      <input type="text t1" placeholder="Enter a valid PQL query" v-model="newQuery">
+      <!--<input type="text t1" placeholder="Enter a valid PQL query" v-model="newQuery">-->
+      <textarea
+          cols="30" rows="3"
+          placeholder="Enter a valid PQL query"
+          v-model="newQuery"
+          class="bg-light"
+      >
+      </textarea>
     </div>
   </div>
 </template>
@@ -38,11 +45,12 @@
 </script>
 
 <style scoped>
-  input {
+  textarea {
     border-width: 0;
+    width: 100%;
   }
-  input:focus{
-    outline: none;
+  textarea:focus{
+    /*outline: none;*/
   }
 
   .card {

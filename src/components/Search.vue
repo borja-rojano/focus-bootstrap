@@ -6,7 +6,7 @@
       :query="concepts[index].q"
       :updateConcepts="updateConcepts"
     ></concept>
-    <div>
+    <div id="newConcept">
       <button @click="newConcept" class="btn btn-outline-primary">Add New Concept</button>
       <button @click="runSearch" class="btn btn-outline-success">Search</button>
     </div>
@@ -61,5 +61,9 @@
 <style scoped>
   button:focus{
     outline: none;
+  }
+
+  #newConcept{
+    margin-bottom: 40px;
   }
 </style>
