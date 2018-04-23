@@ -1,5 +1,5 @@
 <template>
-  <div class="col-8 panel" >
+  <div class="col-12" >
     <concept
       v-for="(entry, index) in concepts"
       :index="index"
