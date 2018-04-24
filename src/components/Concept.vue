@@ -6,7 +6,7 @@
       <textarea
           cols="30" rows="3"
           placeholder="Enter a valid PQL query"
-          v-model="newQuery"
+          v-model.lazy="newQuery"
           class="bg-light"
       >
       </textarea>
@@ -38,7 +38,6 @@
       watch: {
         newQuery (){
           this.updateConcepts(this.newQuery, this.index)
-
         }
       }
     }

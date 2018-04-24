@@ -9,6 +9,7 @@
     <div id="newConcept">
       <button @click="newConcept" class="btn btn-outline-primary">Add New Concept</button>
       <button @click="runSearch" class="btn btn-outline-success">Search</button>
+      <button @click="returnWL" class="btn btn-outline-success">Update</button>
     </div>
 
   </div>
@@ -28,6 +29,12 @@
               combined+= `(${this.concepts[i].q}),`
           }
           return combined
+      }
+    },
+    props:{
+      updateWorkingList: {
+        type:  Function,
+        required: true
       }
     },
 
@@ -53,6 +60,14 @@
       },
       updateConcepts(query, index){
         this.concepts[index].q = query
+      },
+      returnWL(){
+        this.updateWorkingList(
+          function (wl) {
+            wl.push('EP0000001')
+            console.log(wl.length);
+          }
+        )
       }
     }
   }

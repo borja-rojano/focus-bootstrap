@@ -1,11 +1,24 @@
 <template>
-  <nav  id='navigation' class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="btn-group" role="group" aria-label="Basic example">
-      <button type="button" class="btn btn-primary">Search</button>
-      <button type="button" class="btn btn-primary">Viewer</button>
-      <button type="button" class="btn btn-primary">About</button>
-    </div>
-  </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">FOCUS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Search <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Viewer</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
 </template>
 
 <script>
@@ -16,5 +29,7 @@
 </script>
 
 <style scoped>
-
+nav {
+  margin-bottom: 20PX;
+}
 </style>

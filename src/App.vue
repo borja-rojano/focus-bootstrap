@@ -1,22 +1,12 @@
 <template>
   <div class="container-fluid">
-
-    <nav  id='navigation' class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary" @click="activeComponent='appSearch'">
-          Search
-        </button>
-        <button type="button" class="btn btn-primary" @click="activeComponent='appViewer'">
-          Viewer
-        </button>
-        <button type="button" class="btn btn-primary" @click="activeComponent='appAbout'">
-          About
-        </button>
-      </div>
-    </nav>
-
+    <appHeader></appHeader>
     <div class="row">
-      <component :is="activeComponent"></component>
+      <!-- <component
+      :is="activeComponent"
+      :updateWorkingList='updateWorkingList'
+      ></component> -->
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -37,8 +27,14 @@
         },
         data () {
             return {
-              activeComponent : 'appSearch'
+              activeComponent : 'appSearch',
+              workingList : [],
             }
+        },
+        methods: {
+          updateWorkingList(callback){
+            callback(this.workingList)
+          }
         }
     }
 </script>
