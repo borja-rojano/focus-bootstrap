@@ -1,4 +1,5 @@
 <template>
+<div class="row" >
   <div class="col-12" >
     <concept
       v-for="(entry, index) in concepts"
@@ -11,8 +12,8 @@
       <button @click="runSearch" class="btn btn-outline-success">Search</button>
       <button @click="returnWL" class="btn btn-outline-success">Update</button>
     </div>
-
   </div>
+</div>
 </template>
 
 <script>

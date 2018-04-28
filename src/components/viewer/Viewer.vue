@@ -1,13 +1,19 @@
 <template>
-    <div class="col-12" >
-
-    </div>
+<div>
+<!-- The main section  -->
+<!-- The toolbar  -->
+<appToolbox></appToolbox>
+</div>
 </template>
 
 <script>
-    export default {
-        name: "Viewer"
+import Toolbox from './Toolbox.vue'
+
+export default {
+    components : {
+      appToolbox: Toolbox
     }
+}
 </script>
 
 <style scoped>

@@ -10,7 +10,8 @@ Vue.use(BootstrapVue)
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-  routes
+  routes,
+  
 })
 
 new Vue({
