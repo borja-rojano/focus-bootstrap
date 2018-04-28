@@ -26,7 +26,7 @@
 
 <style>
   body {
-    background-color: #F8F8F8;
+    background-color: #f0f0f9;
   }
 
 
